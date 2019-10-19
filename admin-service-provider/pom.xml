@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springcloud-admin</artifactId>
+        <groupId>org.poem</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>admin-service-provider</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.poem</groupId>
+            <artifactId>admin-common-vo</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- admin client，该依赖必须要加上，否则会访问不到健康监控的接口 -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
+    </dependencies>
+</project>

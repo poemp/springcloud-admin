@@ -1,0 +1,12 @@
+global:
+#nacos
+  nacos:
+    server-addr: 127.0.0.1:8848
+  #    api center
+  admin-base-center:
+    server-name: admin-base-center
+    port: 2002
+  # admin-service-provicer
+  admin-service-provider:
+    server-name: admin-service-provider
+    port: 2003

@@ -1,0 +1,16 @@
+server:
+  port: ${global.admin-service-provider.port}
+spring:
+  profiles:
+    include: global
+  application:
+    name: ${global.admin-service-provider.server-name}
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${global.nacos.server-addr}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
