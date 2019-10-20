@@ -1,4 +1,4 @@
-package org.poem.config.swagger;
+package org.poem.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,11 +30,15 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("org.poem"))
+                .apis(RequestHandlerSelectors.basePackage("org.poem.feign"))
                 .paths(PathSelectors.any())
                 .build().globalOperationParameters(paraList);
     }
 
+    /**
+     *
+     * @return
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("API中心")

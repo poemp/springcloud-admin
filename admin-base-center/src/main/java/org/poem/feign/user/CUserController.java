@@ -30,8 +30,9 @@ public class CUserController {
             @ApiResponse(code = 400, message = "请求参数没有填好"),
             @ApiResponse(code = 404, message = "请求路径没有找到")
     })
-    @RequestMapping("/getUser")
+    @GetMapping("/getUser")
     public UserVO getUser(){
+        logger.info("CUserController - getUser");
         return this.cUserService.getUserVo();
     }
 }

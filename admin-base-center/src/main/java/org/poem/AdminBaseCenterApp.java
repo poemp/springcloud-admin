@@ -21,4 +21,5 @@ public class AdminBaseCenterApp {
         logger.info("Start AdminBaseCenterApp Service.");
         SpringApplication.run(AdminBaseCenterApp.class, args);
     }
+
 }
