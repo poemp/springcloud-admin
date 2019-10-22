@@ -15,6 +15,7 @@ spring:
         mail:
           to: 644543260@qq.com
           from: "Spring Boot <locahost@sina.com>"
+      context-path: /admin
 management:
   endpoints:
     web:
